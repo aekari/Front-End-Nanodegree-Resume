@@ -13,7 +13,7 @@ var bio = {
     },
     "welcomeMessage": "Hello, and welcome to my site.",
     "skills": ["HTML", "CSS", "JS"],
-    "picture": "images/biophoto.jpg",
+    "biopic": "images/biophoto.jpg",
     "display": function () {
         var formattedHTMLheaderName = HTMLheaderName.replace(DATA, bio.name);
         var formattedHTMLheaderRole = HTMLheaderRole.replace(DATA, bio.role);
@@ -33,7 +33,7 @@ var bio = {
         $("#topContacts, #footerContacts").append(formattedHTMLblog);
         $("#topContacts, #footerContacts").append(formattedHTMLlocation);
 
-        var formattedHTMLbioPic = HTMLbioPic.replace(DATA, bio.picture);
+        var formattedHTMLbioPic = HTMLbioPic.replace(DATA, bio.biopic);
         var formattedHTMLwelcomeMsg = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
         $("#header").append(formattedHTMLbioPic);
         $("#header").append(formattedHTMLwelcomeMsg);
@@ -56,7 +56,7 @@ var education = {
             "name": "Code University",
             "location": "Queens, NY",
             "degree": "Masters",
-            "major": ["Programing"],
+            "majors": ["Programing"],
             "dates": "May 2001"
         }
     ],
@@ -76,7 +76,7 @@ var education = {
                 var formattedHTMLschoolName = HTMLschoolName.replace(DATA, education.schools[x].name);
                 var formattedHTMLschoolLocation = HTMLschoolLocation.replace(DATA, education.schools[x].location);
                 var formattedHTMLschoolDegree = HTMLschoolDegree.replace(DATA, education.schools[x].degree);
-                var formattedHTMLschoolMajor = HTMLschoolMajor.replace(DATA, education.schools[x].major);
+                var formattedHTMLschoolMajor = HTMLschoolMajor.replace(DATA, education.schools[x].majors);
                 var formattedHTMLschoolDates = HTMLschoolDates.replace(DATA, education.schools[x].dates);
 
                 $(".education-entry").append(formattedHTMLschoolName + formattedHTMLschoolDegree);
